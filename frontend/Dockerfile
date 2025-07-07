@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY package.json ./
 RUN npm install
-COPY package-lock.json ./ #
+COPY package-lock.json ./ 
 
 COPY . .
 RUN npm run build #This builds the production version of your app
