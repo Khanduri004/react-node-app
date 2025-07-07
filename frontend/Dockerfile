@@ -7,7 +7,7 @@ RUN npm install
 COPY package-lock.json ./ 
 
 COPY . .
-RUN npm run build #This builds the production version of your app
+RUN npm run build 
 
 FROM nginx:alpine
 COPY --from=build /app/build /usr/share/nginx/html
