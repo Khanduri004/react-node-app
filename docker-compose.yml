@@ -2,20 +2,22 @@ version: "3.8"
 
 services:
   backend:
-    build: ./backend
+    build: ./backend  # Build and start the backend container
     ports:
       - "5000:5000"
     networks:
       - app-network
 
   frontend:
-    build: ./frontend
+    build: ./frontend # Build and start the frontend container
     ports:
       - "3000:80"
     depends_on:
       - backend
     networks:
       - app-network
+
+#Connect both via Docker Compose networking
 
 networks:
   app-network:
