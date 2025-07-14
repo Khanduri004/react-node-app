@@ -9,4 +9,6 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["npm", "start"] # this runs node server.js 
+CMD npm start
+
+# this runs node server.js 
